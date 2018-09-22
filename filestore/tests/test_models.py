@@ -89,7 +89,6 @@ class FileTests(TransactionTestCase):
             name='file1', content=b'1234', content_type='application/octet-stream'))
         file1 = File.objects.get(file_name='file1')
         print('file1.path', file1.path)
-        # os.remove(file1.path)
         shutil.rmtree('/'.join(file1.path.split('/')[0:2]))
         file1.delete()
 

@@ -1,19 +1,16 @@
-# ref: https://docs.travis-ci.com/user/languages/python
+sudo: required
+
 language: python
-dist: trusty
 
-matrix:
-    include:
-     - python: 3.6
-       env: TOXENV=py36
-     - python: 3.6
-       env: TOXENV=flake8
+services:
+  - docker
 
-install:
-  - pip install tox codecov
+before_install:
+  - docker build -t mkerins/mass .
+  - docker run -d carlad/sinatra /bin/sh -c "freshclam && /etc/init.d/clamav-daemon start"
 
 script:
-  - tox
+  - ./run_tests
 
 after_success:
   - codecov
