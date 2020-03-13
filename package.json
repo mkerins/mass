@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/mkerins/mass#readme",
   "devDependencies": {
-    "acorn": "^7.0.0",
+    "acorn": "^7.1.1",
     "eslint": "^6.2.1",
     "eslint-config-google": "^0.13.0",
     "webpack": "^4.39.2",
