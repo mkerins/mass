@@ -2,4 +2,4 @@
 coverage==4.5.1
 fakeredis==0.14.0
 flake8==3.5.0
-django-debug-toolbar==1.10.1
+django-debug-toolbar==1.11.1
